@@ -8,6 +8,7 @@
   - [Features](#features)
     - [Positional Awareness](#positional-awareness)
     - [Placement Prevention](#placement-prevention)
+  - [Compatibility](#compatibility)
 
 ## Summary
 
@@ -36,3 +37,13 @@ Placing any block will trigger a check on block class and position against the e
 If the check indicates that this block is not permitted to be placed here, that block will be removed and placed back into the player's inventory.
 
 A notification will also trigger on the player's toolbelt to explain what just happened.
+
+## Compatibility
+
+Supported Languages: `English` (for now)
+
+Environment | Compatible | Does EAC Need to be Disabled? | Who needs to install?
+--- | --- | --- | ---
+Dedicated Server | Yes | no | only server
+Peer-to-Peer Hosting | Untested | N/A | N/A
+Single Player Game | Untested | N/A | N/A
