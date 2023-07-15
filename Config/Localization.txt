@@ -1,0 +1,19 @@
+Key,File,Type,english
+
+protectHighTierPrefabsTip01_title,Journal Tip,,"Protected POIs [ff8000][MOD]"
+protectHighTierPrefabsTip01,Journal Tip,,"Tier 4 and 5 POIs (points of interest) are late-game quest locations offered by the Traders. They produce the best loot, but there usually aren't many of them on a map.\n\nPlacing a Bedroll or Land Claim Block within any quest location will prevent quests from being issued or activated there. So when someone attempts to take over a Tier 4 or 5 POI in this way, it often generates a lot of frustration and drama from other players on the server.\n\nFor this reason, [ff8000]Land Claim Blocks and Bedrolls are automatically prevented from being placed within Tier 4 or 5 POIs[-] to avoid interrupting any quests at these locations.\n\nPlease feel free to take over [00ff80]any Remnant (non-quest) or Tier 1-3 POI[-] on the map instead, or build anywhere outside of quest POIs if you prefer."
+
+
+protectHighTierPrefabsInterruptLandClaimTip01,buffs,Buff,"Land Claim area cannot overlap with Tier 4/5 quest locations."
+protectHighTierPrefabsInterruptLandClaimTip02,buffs,Buff,"Your land claim block has been returned to you."
+protectHighTierPrefabsInterruptBedTip01,buffs,Buff,"Beds cannot be placed within Tier 4/5 quest locations."
+
+protectHighTierPrefabsInLandClaimPreventionZoneName,buffs,Buff,"In Land Claim Prevention Zone"
+protectHighTierPrefabsInLandClaimPreventionZoneDesc,buffs,Buff,"You cannot place a Land Claim Block here."
+leftLandClaimPreventionZoneName,buffs,Buff,"Left Land Claim Prevention Zone"
+leftLandClaimPreventionZoneDesc,buffs,Buff,"It's safe to place a Land Claim Block here."
+
+protectHighTierPrefabsInBedPreventionZoneName,buffs,Buff,"In Bedroll Prevention Zone"
+protectHighTierPrefabsInBedPreventionZoneDesc,buffs,Buff,"You cannot place a Bedroll here."
+leftBedrollPreventionZoneName,buffs,Buff,"Left Bedroll Prevention Zone"
+leftBedrollPreventionZoneDesc,buffs,Buff,"It's safe to place a Bedroll here."

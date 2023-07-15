@@ -1,0 +1,67 @@
+<config>
+    <append xpath="/buffs/buff[@name='buffStatusCheck02']">
+        <effect_group name="protect-high-tier-prefabs-journal-entries">
+            <triggered_effect trigger="onSelfEnteredGame" action="AddJournalEntry" journal="protectHighTierPrefabsTip01" />
+        </effect_group>
+    </append>
+
+    <append xpath="/buffs">
+        <buff name="protectHighTierPrefabsInLandClaimPreventionZone" name_key="protectHighTierPrefabsInLandClaimPreventionZoneName" description_key="protectHighTierPrefabsInLandClaimPreventionZoneDesc" icon="ui_game_symbol_brick" icon_color="255,128,0">
+            <duration value="0" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[ff8000]Blocked[-]]" />
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="leftLandClaimPreventionZone" />
+                <triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="leftLandClaimPreventionZone" />
+            </effect_group>
+        </buff>
+        <buff name="leftLandClaimPreventionZone" name_key="leftLandClaimPreventionZoneName" description_key="leftLandClaimPreventionZoneDesc" icon="ui_game_symbol_brick" icon_color="0,255,128">
+            <duration value="3" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[00ff80]Allowed[-]]" />
+        </buff>
+
+        <buff name="protectHighTierPrefabsInBedPreventionZone" name_key="protectHighTierPrefabsInBedPreventionZoneName" description_key="protectHighTierPrefabsInBedPreventionZoneDesc" icon="ui_game_symbol_map_bed" icon_color="255,128,0">
+            <duration value="0" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[ff8000]Blocked[-]]" />
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="leftBedrollPreventionZone" />
+                <triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="leftBedrollPreventionZone" />
+            </effect_group>
+        </buff>
+        <buff name="leftBedrollPreventionZone" name_key="leftBedrollPreventionZoneName" description_key="leftBedrollPreventionZoneDesc" icon="ui_game_symbol_map_bed" icon_color="0,255,128">
+            <duration value="3" />
+            <stack_type value="ignore" />
+            <display_value value="xxx" />
+            <display_value_key value="[[00ff80]Allowed[-]]" />
+        </buff>
+
+        <buff name="protectHighTierPrefabsInterruptLandClaimPlacement" hidden="true">
+            <duration value="2" />
+            <stack_type value="effect" />
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="keystone_placed" />
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="keystone_build_warning" play_in_head="true" />
+                <triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message_key="protectHighTierPrefabsInterruptLandClaimTip01" />
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="protectHighTierPrefabsInterruptLandClaimPlacement" />
+                <!-- TODO: is it helpful to include this if a full inventory would cause it to drop on the ground instead? -->
+                <!-- TODO: keep or delete this entry in localization -->
+                <!-- <triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message_key="protectHighTierPrefabsInterruptLandClaimTip02" /> -->
+            </effect_group>
+        </buff>
+
+        <buff name="protectHighTierPrefabsInterruptBedPlacement" hidden="true">
+            <duration value="2" />
+            <stack_type value="effect" />
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="keystone_build_warning" play_in_head="true" />
+                <triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message_key="protectHighTierPrefabsInterruptBedTip01" />
+                <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="protectHighTierPrefabsInterruptBedPlacement" />
+            </effect_group>
+        </buff>
+    </append>
+</config>
