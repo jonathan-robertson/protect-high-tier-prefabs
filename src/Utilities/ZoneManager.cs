@@ -33,7 +33,7 @@ namespace ProtectHighTierPrefabs.Utilities
                         if (_landClaimPreventionZone.ContainsKey(pi.id)
                             || _bedPreventionZone.ContainsKey(pi.id))
                         {
-                            _log.Error($"Prefab {pi.id} appears to have already been recorded but is showing up again in this hook => id: {pi.id} | tier: {pi.prefab.DifficultyTier} | filename: {pi.prefab.FileNameNoExtension} | tags: {pi.prefab.GetQuestTags()}");
+                            _log.Error($"Prefab {pi.id} appears to have already been recorded but is showing up again in this hook => id: {pi.id} | tier: {pi.prefab.DifficultyTier} | filename: {pi.prefab.PrefabName} | tags: {pi.prefab.GetQuestTags()}");
                             return;
                         }
                         _landClaimPreventionZone.Add(pi.id, new BoundsInt(pi.boundingBoxPosition - landclaimPadding, pi.boundingBoxSize + (landclaimPadding * 2)));

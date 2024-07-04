@@ -105,7 +105,7 @@ namespace ProtectHighTierPrefabs.Utilities
         /// <returns>Whether the given BlockValue can be placed at the given Position.</returns>
         private static bool CanPlaceBlock(Vector3i pos, BlockValue blockValue, out bool isLandClaim)
         {
-            if (blockValue.Block.Properties.Values.TryGetString("Class", out var className))
+            if (blockValue.Block.Properties.Values.TryGetValue("Class", out var className))
             {
                 switch (className)
                 {

@@ -1,10 +1,4 @@
 <config>
-    <append xpath="/buffs/buff[@name='buffStatusCheck02']">
-        <effect_group name="protect-high-tier-prefabs-journal-entries">
-            <triggered_effect trigger="onSelfEnteredGame" action="AddJournalEntry" journal="protectHighTierPrefabsTip01" />
-        </effect_group>
-    </append>
-
     <append xpath="/buffs">
         <buff name="protectHighTierPrefabsInLandClaimPreventionZone" name_key="protectHighTierPrefabsInLandClaimPreventionZoneName" description_key="protectHighTierPrefabsInLandClaimPreventionZoneDesc" icon="ui_game_symbol_brick" icon_color="255,128,0">
             <duration value="0" />
