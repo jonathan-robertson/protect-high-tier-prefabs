@@ -10,8 +10,8 @@ namespace ProtectHighTierPrefabs.Utilities
         private const string _landclaimClass = "LandClaim";
         private const string _bedClass = "SleepingBag";
 
-        private const string _buffInterruptLandClaimPlacementName = "protectHighTierPrefabsInterruptLandClaimPlacement";
-        private const string _buffInterruptBedPlacementName = "protectHighTierPrefabsInterruptBedPlacement";
+        public const string BUFF_INTERRUPT_LAND_CLAIM_PLACEMENT_NAME = "protectHighTierPrefabsInterruptLandClaimPlacement";
+        public const string BUFF_INTERRUPT_BED_PLACEMENT_NAME = "protectHighTierPrefabsInterruptBedPlacement";
 
         private static readonly WaitForSeconds WaitBriefly = new WaitForSeconds(0.1f);
         private static readonly Dictionary<string, ItemStack> _itemStacks = new Dictionary<string, ItemStack>();
@@ -103,7 +103,7 @@ namespace ProtectHighTierPrefabs.Utilities
         /// <param name="pos">Vector3i represents map coordinates a client is attempting to place the given BlockValue at.</param>
         /// <param name="blockValue">BlockValue a client if attempting to place at the given Position.</param>
         /// <returns>Whether the given BlockValue can be placed at the given Position.</returns>
-        private static bool CanPlaceBlock(Vector3i pos, BlockValue blockValue, out bool isLandClaim)
+        public static bool CanPlaceBlock(Vector3i pos, BlockValue blockValue, out bool isLandClaim)
         {
             if (blockValue.Block.Properties.Values.TryGetValue("Class", out var className))
             {
@@ -140,7 +140,7 @@ namespace ProtectHighTierPrefabs.Utilities
         private static IEnumerator ReturnDeniedLandClaimBlock(ClientInfo clientInfo, EntityPlayer player, Vector3i pos, BlockValue blockValue)
         {
             // interrupt claim sound and replace with rejection sound along with notice
-            _ = player.Buffs.AddBuff(_buffInterruptLandClaimPlacementName);
+            _ = player.Buffs.AddBuff(BUFF_INTERRUPT_LAND_CLAIM_PLACEMENT_NAME);
             yield return WaitBriefly;
             try
             {
@@ -156,7 +156,7 @@ namespace ProtectHighTierPrefabs.Utilities
         private static IEnumerator ReturnDeniedSleepingBagBlock(ClientInfo clientInfo, PersistentPlayerData persistentPlayerData, EntityPlayer player, Vector3i pos, BlockValue blockValue)
         {
             // interrupt claim sound and replace with rejection sound along with notice
-            _ = player.Buffs.AddBuff(_buffInterruptBedPlacementName);
+            _ = player.Buffs.AddBuff(BUFF_INTERRUPT_BED_PLACEMENT_NAME);
             yield return WaitBriefly;
             try
             {

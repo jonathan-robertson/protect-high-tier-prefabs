@@ -39,6 +39,10 @@
       <HintPath>..\references\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="InControl">
+      <HintPath>..\references\InControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="LogLibrary">
       <HintPath>..\references\LogLibrary.dll</HintPath>
       <Private>False</Private>
@@ -68,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Commands\ConsoleCmdProtectHighTierPrefabs.cs" />
     <Compile Include="ModApi.cs" />
+    <Compile Include="Patches\BlockToolSelection.cs" />
     <Compile Include="Patches\EntityAlive.cs" />
     <Compile Include="Patches\NetPackageSetBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
