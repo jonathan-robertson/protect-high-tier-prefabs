@@ -1,14 +1,9 @@
 # Protect High Tier Prefabs
 
-[![🧪 Tested On 7DTD 1.1 (b14)](https://img.shields.io/badge/🧪%20Tested%20On-7DTD%201.1%20(b14)-blue.svg)](https://7daystodie.com/) [![📦 Automated Release](https://github.com/jonathan-robertson/protect-high-tier-prefabs/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/protect-high-tier-prefabs/actions/workflows/release.yml)
-
-- [Protect High Tier Prefabs](#protect-high-tier-prefabs)
-  - [Summary](#summary)
-    - [Support](#support)
-  - [Features](#features)
-    - [Positional Awareness](#positional-awareness)
-    - [Placement Prevention](#placement-prevention)
-  - [Compatibility](#compatibility)
+[![🧪 Tested with 7DTD 1.2 (b27)](https://img.shields.io/badge/🧪%20Tested%20with-7DTD%201.2%20(b27)-blue.svg)](https://7daystodie.com/)
+[![✅ Dedicated Servers Supported ServerSide](https://img.shields.io/badge/✅%20Dedicated%20Servers-Supported%20Serverside-blue.svg)](https://7daystodie.com/)
+[![❌ Single Player and P2P Unsupported](https://img.shields.io/badge/❌%20Single%20Player%20and%20P2P-Unsupported-red.svg)](https://7daystodie.com/)
+[![📦 Automated Release](https://github.com/jonathan-robertson/protect-high-tier-prefabs/actions/workflows/release.yml/badge.svg)](https://github.com/jonathan-robertson/protect-high-tier-prefabs/actions/workflows/release.yml)
 
 ## Summary
 
@@ -42,8 +37,8 @@ A notification will also trigger on the player's toolbelt to explain what just h
 
 Supported Languages: `English` (for now)
 
-Environment | Compatible | Does EAC Need to be Disabled? | Who needs to install?
---- | --- | --- | ---
-Dedicated Server | Yes | no | only server
-Peer-to-Peer Hosting | Untested | N/A | N/A
-Single Player Game | Untested | N/A | N/A
+| Environment          | Compatible | Does EAC Need to be Disabled? | Who needs to install? |
+| -------------------- | ---------- | ----------------------------- | --------------------- |
+| Dedicated Server     | Yes        | no                            | only server           |
+| Peer-to-Peer Hosting | Untested   | N/A                           | N/A                   |
+| Single Player Game   | Untested   | N/A                           | N/A                   |
