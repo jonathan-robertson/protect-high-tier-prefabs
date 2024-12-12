@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ProtectHighTierPrefabs.Patches
 {
-    [HarmonyPatch(typeof(NetPackageSetBlock), "ProcessPackage")]
+    [HarmonyPatch(typeof(NetPackageSetBlock), nameof(NetPackageSetBlock.ProcessPackage))]
     internal class NetPackageSetBlock_ProcessPackage_Patches
     {
         private static readonly ModLog<NetPackageSetBlock_ProcessPackage_Patches> _log = new ModLog<NetPackageSetBlock_ProcessPackage_Patches>();

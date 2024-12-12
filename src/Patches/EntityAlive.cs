@@ -4,7 +4,7 @@ using System;
 
 namespace ProtectHighTierPrefabs.Patches
 {
-    [HarmonyPatch(typeof(EntityAlive), "updateCurrentBlockPosAndValue")]
+    [HarmonyPatch(typeof(EntityAlive), nameof(EntityAlive.updateCurrentBlockPosAndValue))]
     internal class EntityAlive_updateCurrentBlockPosAndValue_Patches
     {
         private static readonly ModLog<EntityAlive_updateCurrentBlockPosAndValue_Patches> _log = new ModLog<EntityAlive_updateCurrentBlockPosAndValue_Patches>();
